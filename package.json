@@ -1,0 +1,23 @@
+{
+  "name": "beanmusic",
+  "version": "1.0.0",
+  "description": "BeanBox music rating bot",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuanRTech/beanmusic.git"
+  },
+  "author": "juanrtech",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/JuanRTech/beanmusic/issues"
+  },
+  "homepage": "https://github.com/JuanRTech/beanmusic#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "dotenv": "^8.2.0"
+  }
+}

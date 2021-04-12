@@ -69,7 +69,7 @@ module.exports = {
 
                     const output = new Discord.MessageEmbed()
                         .setColor('#00FFFF')
-                        .setTitle(match[1][0].length >=1 ? match[1][3] : 'No Title')
+                        .setTitle(match[1][0].length >=1 ? match[1][0] : 'No Title')
                         .setURL(match[1][4].length >=1 ? match[1][4] : 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
                         .setAuthor(match[1][3].length >=1 ? match[1][3] : 'No Author' )
                         .setDescription((match[1][1].length >=1 ? match[1][1] : 'No Type' )+ ' | ' + (match[1][2].length >=1 ? match[1][2] : 'No Genre'))

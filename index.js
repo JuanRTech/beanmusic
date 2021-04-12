@@ -2,6 +2,47 @@ require('dotenv').config();
 const fs = require('fs');
 const Discord = require('discord.js');
 
+const { google } = require('googleapis');
+const privatekey = require("./keys.json");
+
+const jwtClient = new google.auth.JWT(
+    privatekey.client_email,
+    null,
+    privatekey.private_key,
+    ['https://www.googleapis.com/auth/spreadsheets',
+        'https://www.googleapis.com/auth/drive']);
+//authenticate request
+jwtClient.authorize(function (err, tokens) {
+    if (err) {
+        console.log(err);
+        return;
+    } else {
+        console.log("Successfully connected to Google!");
+    }
+});
+
+module.exports = {
+    google: google,
+    jwtClient: jwtClient
+};
+
+//test
+// sheets.spreadsheets.values.get({
+//     auth: jwtClient,
+//     spreadsheetId: spreadsheetId,
+//     range: 'raw_dirtyj'
+// }, function (err, response) {
+//     if (err) {
+//         console.log('The API returned an error: ' + err);
+//     } else {
+//         console.log('Movie list from Google Sheets:');
+//         // for (let row of response.values) {
+//         //     console.log('Title [%s]\t\tRating [%s]', row[0], row[1]);
+//         // }
+//         console.log(response.data.values);
+//     }
+// });
+
 const client = new Discord.Client({ ws: { properties: { $browser: "Discord iOS" } } });
 client.commands = new Discord.Collection();
 client.cooldowns = new Discord.Collection();
@@ -38,10 +79,10 @@ client.once('ready', () => {
 client.on('message', message => {
     //quirky things
     if (message.content == 'a' && !message.author.bot) {
-        return message.channel.send('same des! GAWR GURA DES!')
+        return message.channel.send('same des! GAWR GURA DES!');
     }
     if (message.content == 'nin...' && !message.author.bot) {
-        return message.channel.send('jin! :carrot:')
+        return message.channel.send('jin! :carrot:');
     }
 
     if (!message.content.startsWith(prefix) || message.author.bot) return;

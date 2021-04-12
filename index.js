@@ -50,6 +50,15 @@ const activities_list = [
     "RIDE ON TIME",
     "brendan complain",
     "Pop on Rocks",
+    "conor singing <3",
+    "logan chug jug",
+    "korone",
+    "city pop shark",
+    "gooruh",
+    "gawr gura",
+    "eldritch horrors",
+    "nyanners",
+    "epic music",
 ];
 
 client.once('ready', () => {

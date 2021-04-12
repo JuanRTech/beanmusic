@@ -8,6 +8,8 @@ module.exports = {
             return message.reply("you gotta search for something :pleading_face:");
         }
 
+        message.channel.send("searching...");
+
         const spreadsheetId = '1BR-4SFwNXP_c1mK19AEXx7aa6PFfzaSJFDJ2bgKyU8k';
         const users = ['raw_dirtyj', 'raw_mrposhy', 'raw_glassarchon', 'raw_loqueres', 'raw_sola', 'raw_rohan', 'raw_brendwini', 'raw_kyotoyen', 'raw_ram'];
         const { jwtClient, google } = require('../../index.js');
@@ -67,15 +69,15 @@ module.exports = {
 
                     const output = new Discord.MessageEmbed()
                         .setColor('#00FFFF')
-                        .setTitle(match[1][0])
-                        .setURL(match[1][4])
-                        .setAuthor(match[1][3])
-                        .setDescription(match[1][1] + ' | ' + match[1][2])
+                        .setTitle(match[1][0].length >=1 ? match[1][3] : 'No Title')
+                        .setURL(match[1][4].length >=1 ? match[1][4] : 'https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+                        .setAuthor(match[1][3].length >=1 ? match[1][3] : 'No Author' )
+                        .setDescription((match[1][1].length >=1 ? match[1][1] : 'No Type' )+ ' | ' + (match[1][2].length >=1 ? match[1][2] : 'No Genre'))
                         .addFields(
                             { name: 'Rated on', value: users[match[0]] },
-                            { name: 'Comment', value: match[1][5] },
-                            { name: 'Rating', value: match[1][6], inline: true },
-                            { name: 'Date', value: match[1][7], inline: true },
+                            { name: 'Comment', value: match[1][5].length >=1 ? match[1][5] : 'No Comment' },
+                            { name: 'Rating', value: match[1][6].length >=1 ? match[1][6] : 'No Rating', inline: true },
+                            { name: 'Date', value: match[1][7].length >=1 ? match[1][7] : 'No Date', inline: true },
                         )
                         .setFooter('Bean Music');
 
@@ -87,6 +89,8 @@ module.exports = {
                     message.reply("No results found :weary:");
                     return;
                 }
+
+                message.channel.send("Done :clap:");
             })
     },
 };

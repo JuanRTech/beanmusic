@@ -17,6 +17,6 @@ module.exports = {
             )
             .setFooter('Source code', 'https://github.com/JuanRTech/beanmusic');
 
-        channel.send(info);
+        message.channel.send(info);
     },
 };

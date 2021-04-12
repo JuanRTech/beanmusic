@@ -14,7 +14,7 @@ module.exports = {
                 { name: 'What do I do?', value: 'I\'m a bot that lets you search through all of the user ratings!', inline: true },
                 { name: 'I want to join!', value: 'ping dirtyj', inline: true },
             )
-            .setFooter('Bean Music', 'https://github.com/JuanRTech/beanmusic');
+            .setFooter('Bean Music');
 
         message.channel.send(info);
     },

@@ -7,15 +7,14 @@ module.exports = {
         const info = new Discord.MessageEmbed()
             .setColor('#ff0000')
             .setTitle('Bean Music')
-            .setURL('https://discord.js.org/')
-            .setAuthor('RATE ALL THE SONGS', 'https://docs.google.com/spreadsheets/d/1BR-4SFwNXP_c1mK19AEXx7aa6PFfzaSJFDJ2bgKyU8k/edit?usp=sharing')
-            .setThumbnail('https://i.imgur.com/wSTFkRM.png')
+            .setURL('https://docs.google.com/spreadsheets/d/1BR-4SFwNXP_c1mK19AEXx7aa6PFfzaSJFDJ2bgKyU8k/edit?usp=sharing')
+            .setAuthor('RATE ALL THE SONGS')
             .addFields(
                 { name: 'What even is this?', value: 'The BeanBox is rating every song ever...' },
                 { name: 'What do I do?', value: 'I\'m a bot that lets you search through all of the user ratings!', inline: true },
                 { name: 'I want to join!', value: 'ping dirtyj', inline: true },
             )
-            .setFooter('Source code', 'https://github.com/JuanRTech/beanmusic');
+            .setFooter('Bean Music', 'https://github.com/JuanRTech/beanmusic');
 
         message.channel.send(info);
     },

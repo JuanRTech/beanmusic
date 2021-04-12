@@ -8,7 +8,7 @@ module.exports = {
             .setColor('#ff0000')
             .setTitle('Bean Music')
             .setURL('https://discord.js.org/')
-            .setAuthor('RATE ALL THE SONGS', 'https://discord.js.org')
+            .setAuthor('RATE ALL THE SONGS', 'https://docs.google.com/spreadsheets/d/1BR-4SFwNXP_c1mK19AEXx7aa6PFfzaSJFDJ2bgKyU8k/edit?usp=sharing')
             .setThumbnail('https://i.imgur.com/wSTFkRM.png')
             .addFields(
                 { name: 'What even is this?', value: 'The BeanBox is rating every song ever...' },

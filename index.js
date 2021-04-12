@@ -11,6 +11,7 @@ const jwtClient = new google.auth.JWT(
     privatekey.private_key,
     ['https://www.googleapis.com/auth/spreadsheets',
         'https://www.googleapis.com/auth/drive']);
+
 //authenticate request
 jwtClient.authorize(function (err, tokens) {
     if (err) {
@@ -25,23 +26,6 @@ module.exports = {
     google: google,
     jwtClient: jwtClient
 };
-
-//test
-// sheets.spreadsheets.values.get({
-//     auth: jwtClient,
-//     spreadsheetId: spreadsheetId,
-//     range: 'raw_dirtyj'
-// }, function (err, response) {
-//     if (err) {
-//         console.log('The API returned an error: ' + err);
-//     } else {
-//         console.log('Movie list from Google Sheets:');
-//         // for (let row of response.values) {
-//         //     console.log('Title [%s]\t\tRating [%s]', row[0], row[1]);
-//         // }
-//         console.log(response.data.values);
-//     }
-// });
 
 const client = new Discord.Client({ ws: { properties: { $browser: "Discord iOS" } } });
 client.commands = new Discord.Collection();
@@ -66,6 +50,15 @@ const activities_list = [
     "RIDE ON TIME",
     "brendan complain",
     "Pop on Rocks",
+    "conor singing <3",
+    "logan chug jug",
+    "korone",
+    "city pop shark",
+    "gooruh",
+    "gawr gura",
+    "eldritch horrors",
+    "nyanners",
+    "epic music",
 ];
 
 client.once('ready', () => {

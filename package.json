@@ -1,6 +1,6 @@
 {
   "name": "beanmusic",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "BeanBox music rating bot",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/JuanRTech/beanmusic.git"
   },
   "author": "juanrtech",
-  "license": "GPLv3",
+  "license": "GPLV3",
   "bugs": {
     "url": "https://github.com/JuanRTech/beanmusic/issues"
   },

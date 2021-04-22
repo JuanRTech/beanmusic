@@ -11,7 +11,7 @@ module.exports = {
         message.channel.send("searching...");
 
         const spreadsheetId = '1BR-4SFwNXP_c1mK19AEXx7aa6PFfzaSJFDJ2bgKyU8k';
-        const users = ['raw_dirtyj', 'raw_mrposhy', 'raw_glassarchon', 'raw_loqueres', 'raw_sola', 'raw_rohan', 'raw_brendwini', 'raw_kyotoyen', 'raw_ram'];
+        const users = ['raw_dirtyj', 'raw_mrposhy', 'raw_glassarchon', 'raw_loqueres', 'raw_sola', 'raw_rohan', 'raw_brendwini', 'raw_kyotoyen', 'raw_ram', 'raw_dash'];
         const { jwtClient, google } = require('../../index.js');
         const sheets = google.sheets('v4');
         var results = [];

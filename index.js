@@ -72,7 +72,7 @@ client.once('ready', () => {
 client.on('message', message => {
     //quirky things
     if (message.content == 'a' && !message.author.bot) {
-        return message.channel.send('same des! GAWR GURA DES!');
+        return message.channel.send('same desu! GAWR GURA DESU!');
     }
     if (message.content == 'nin...' && !message.author.bot) {
         return message.channel.send('jin! :carrot:');
